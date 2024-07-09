@@ -2,61 +2,62 @@
 % Titlepage
 %*******************************************************
 \afterpage{%
-\begin{titlepage}
+	\begin{titlepage}
 
-\noindent\begin{minipage}[t]{0.4\textwidth}%
-\flushleft
-\includegraphics[width=2.5cm,valign=t]{gfx/UCD_Logo.pdf} 
-\end{minipage}%
-\hfill%
-\noindent\begin{minipage}[t]{0.5\textwidth}\vspace{-2pt}%
-\flushleft
-\renewcommand{\arraystretch}{0.75}%
-\textuniversityfont{\textcolor{UCDDarkBlue}{\textbf{%
-\begin{tabular}{|l}
-\myDepartment\\%
-\myUni\\% 
-\myTime\\%
-\end{tabular}
-}}}%
-\end{minipage}%
-    
-\begin{center}
-\large
-\bigskip
-\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
-\textthesistitlefont{\scshape\Huge
-\myTitle\par
-}
-\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
-\bigskip% \bigskip \bigskip
-\vspace{20pt}
+		\noindent\begin{minipage}[t]{0.4\textwidth}%
+			\flushleft
+			\includegraphics[width=2.5cm,valign=t]{gfx/UCD_Logo.pdf}
+		\end{minipage}%
+		\hfill%
+		\noindent\begin{minipage}[t]{0.5\textwidth}\vspace{-2pt}%
+			\flushleft
+			\renewcommand{\arraystretch}{0.75}%
+			\textuniversityfont{\textcolor{UCDDarkBlue}{\textbf{%
+						\begin{tabular}{|l}
+							\myDepartment \\%
+							\myUni        \\%
+							\myTime       \\%
+						\end{tabular}
+					}}}%
+		\end{minipage}%
 
-\texttitlepagefont{
-{\LARGE\itshape{\myName}}\\ % Your name
-{{Student Number: \myStudentNumber}} % Your student number
-\vfill
-{\itshape\myTitleDeclaration} \\ \medskip % Thesis subtitle
-\vfill
-\textbf{\myDepartment}
-\bigskip \bigskip
-\begin{center}
-\begin{minipage}[h]{0.6\textwidth}
-\begin{tabular}{rl}
-{\textbf{Head of School:}} & {\itshape \myHOS}\\
-{\textbf{Supervisor:}} & {\itshape \mySupervisor}\\
-{\textbf{Co-supervisor:}} & {\itshape \myCoSupervisor}\\
-{\textbf{RSP Panel:}} & {\itshape \myRSPA}\\
-             & {\itshape \myRSPB}\\
-%{\textbf{Submitted:}} & {\itshape \myTime}\\             
-\end{tabular}
-\end{minipage}
-\end{center}
-}
-\bigskip
-\vfill
-{\textbf\itshape \myTime}
-\end{center}
-\end{titlepage}
-\clearpage
+		\begin{center}
+			\large
+			\bigskip
+			\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+			\textthesistitlefont{\scshape\Huge
+				\myTitle\par
+			}
+			\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+			\bigskip% \bigskip \bigskip
+			\vspace{20pt}
+
+			\texttitlepagefont{
+			{\LARGE\itshape{\myName}}\\ % Your name
+			{{Student Number: \myStudentNumber}} % Your student number
+			\vfill
+			{\itshape\myTitleDeclaration} \\ \medskip % Thesis subtitle
+			\vfill
+			\textbf{\myDepartment}
+			\bigskip \bigskip
+			\begin{center}
+				\begin{minipage}[h]{0.6\textwidth}
+					\begin{tabular}{rl}
+						{\textbf{Head of School:}} & {\itshape \myHOS}          \\
+						{\textbf{Supervisor:}}     & {\itshape \mySupervisor}   \\
+						{\textbf{Co-supervisor:}}  & {\itshape \myCoSupervisor} \\
+						{\textbf{RSP Panel:}}      & {\itshape \myRSPA}         \\
+						                           & {\itshape \myRSPB}         \\
+						%{\textbf{Submitted:}} & {\itshape \myTime}\\             
+					\end{tabular}
+				\end{minipage}
+			\end{center}
+			}
+
+			\bigskip
+			\vfill
+			{\texttitlepagefont\textbf\itshape \myTime}
+		\end{center}
+	\end{titlepage}
+	\clearpage
 } % end of \afterpage{...} material
