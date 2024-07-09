@@ -1,73 +1,62 @@
-
-@article{10.1145/3604915.3608843, 
-year = {2023}, 
-title = {{Scalable Deep Q-Learning for Session-Based Slate Recommendation}}, 
-author = {Roy, Aayush Singha and D'Amico, Edoardo and Tragos, Elias and Lawlor, Aonghus and Hurley, Neil}, 
-journal = {Proceedings of the 17th ACM Conference on Recommender Systems}, 
-doi = {10.1145/3604915.3608843}, 
-abstract = {{Reinforcement learning (RL) has demonstrated great potential to improve slate-based recommender systems by optimizing recommendations for long-term user engagement. To handle the combinatorial action space in slate recommendation, recent works decompose the Q-value of a slate into item-wise Q-values, using an item-wise value-based policy. However, the common case where the value function is a parameterized function taking state and action as input results in a linearly increasing number of evaluations required to select an action, proportional to the number of candidate items. While slow training may be acceptable, this becomes intractable when considering the costly evaluation of the parameterized function, such as with deep neural networks, during model serving time. To address this issue, we propose an actor-based policy that reduces the evaluation of the Q-function to a subset of items, significantly reducing inference time and enabling practical deployment in real-world industrial settings. In our empirical evaluation, we demonstrate that our proposed approach achieves equivalent user session engagement to a value-based policy, while significantly reducing the slate serving time by at least 4 times.}}, 
-pages = {877--882}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Roy/Hurley/Scalable%20Deep%20Q-Learning%20for%20Session-Based%20Slate%20Recommendation/Proceedings%20of%20the%2017th%20ACM%20Conference%20on%20Recommender%20Systems/2023/2023-Proceedings%20of%20the%2017th%20ACM%20Conference%20on%20Recommender%20Systems-Roy-Hurley-Scalable%20Deep%20Q-Learning%20for%20Session-Based%20Slate%20Recommendation.pdf}
+@article{ricci2011introduction,
+  title={Introduction to recommender systems handbook},
+  author={Ricci, Francesco and Rokach, Lior and Shapira, Bracha},
+  journal={Recommender systems handbook},
+  pages={1--35},
+  year={2011},
+  publisher={Springer}
 }
 
-@article{10.1145/3642970.3655842, 
-year = {2024}, 
-title = {{ALS Algorithm for Robust and Communication-Efficient Federated Learning}}, 
-author = {Hurley, Neil and Duriakova, Erika and Geraci, James and O'Reilly-Morgan, Diarmuid and Tragos, Elias and Smyth, Barry and Lawlor, Aonghus}, 
-journal = {Proceedings of the 4th Workshop on Machine Learning and Systems}, 
-doi = {10.1145/3642970.3655842}, 
-abstract = {{Federated learning is a distributed approach to machine learning in which a centralised server coordinates the learning task while training data is distributed among a potentially large set of clients. The focus of this paper is on top-N recommendations using a training set of implicit interactions between users and items. With this limited information, items with no user interaction must also be considered, to present accurate recommendations. In the past, federated recommender systems have been solved through communication of the local model updates using a Stochastic Gradient Descent (SGD) approach. However, SGD is unable to handle the full interaction dataset without the need for negative sampling. This poses a big strain in the setting of wireless networks, as negative sampling considerably increases the communication overhead. To overcome this obstacle we introduce the first federated learning matrix factorisation model fully based on Alternating Least Squares (ALS) computation. The ALS approach offers an efficient matrix factorisation solution with the ability to avoid negative sampling. We show that this novel approach can significantly reduce the communication overhead when compared to its SGD counterparts while maintaining high levels of accuracy.}}, 
-pages = {56--64}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Hurley/Lawlor/ALS%20Algorithm%20for%20Robust%20and%20Communication-Efficient%20Federated%20Learning/Proceedings%20of%20the%204th%20Workshop%20on%20Machine%20Learning%20and%20Systems/2024/2024-Proceedings%20of%20the%204th%20Workshop%20on%20Machine%20Learning%20and%20Systems-Hurley-Lawlor-ALS%20Algorithm%20for%20Robust%20and%20Communication-Efficient%20Federated%20Learning.pdf}
-}
-@article{10.1145/3642970.3655841, 
-year = {2024}, 
-title = {{A Hybrid Decentralised Learning Topology for Recommendations with Improved Privacy}}, 
-author = {Morgan, Diarmuid O'Reilly and Tragos, Elias and Geraci, James and Wang, Qinqin and Hurley, Neil and Smyth, Barry and Lawlor, Aonghus}, 
-journal = {Proceedings of the 4th Workshop on Machine Learning and Systems}, 
-doi = {10.1145/3642970.3655841}, 
-abstract = {{Many recent studies have investigated the extent to which decentralised topologies for machine learning can preserve privacy, showing that in various scenarios the exchanged model updates can leak user information. In this work, we analyse the privacy level of various decentralised topologies for Federated Learning as applied to Recommender Systems (RS), and propose an alternative hybrid topology as a first step to improve privacy, without considering solutions such as encryption or differential privacy, which can be used on top of the proposed topology. We show that an Anonymous Random Walks (ARW) topology can be used to alleviate privacy concerns in federated RS. We measure the information leakage for each topology as a metric for privacy. Further, we design privacy attacks specific to distributed RS and explore the effect of these attacks on the different topologies with respect to user privacy. Through experiments on three public datasets, we show that the choice of topology involves a significant trade off between communication efficiency and privacy.}}, 
-pages = {161--168}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Morgan/Lawlor/A%20Hybrid%20Decentralised%20Learning%20Topology%20for%20Recommendations%20with%20Improved%20Privacy/Proceedings%20of%20the%204th%20Workshop%20on%20Machine%20Learning%20and%20Systems/2024/2024-Proceedings%20of%20the%204th%20Workshop%20on%20Machine%20Learning%20and%20Systems-Morgan-Lawlor-A%20Hybrid%20Decentralised%20Learning%20Topology%20for%20Recommendations%20with%20Improved%20Privacy.pdf}
+@inproceedings{koren2009matrix,
+  title={Matrix factorization techniques for recommender systems},
+  author={Koren, Yehuda and Bell, Robert and Volinsky, Chris},
+  booktitle={Computer},
+  volume={42},
+  number={8},
+  pages={30--37},
+  year={2009},
+  organization={IEEE}
 }
 
-@article{10.1016/j.compbiomed.2024.108585, 
-year = {2024}, 
-title = {{Model-data-driven adversarial active learning for brain tumor segmentation}}, 
-author = {Ma, Siteng and Mathur, Prateek and Ju, Zheng and Lawlor, Aonghus and Dong, Ruihai}, 
-journal = {Computers in Biology and Medicine}, 
-issn = {0010-4825}, 
-doi = {10.1016/j.compbiomed.2024.108585}, 
-pmid = {38761499}, 
-abstract = {{Active learning (AL) attempts to select informative samples in a dataset to minimize the number of required labels while maximizing the performance of the model. Current AL in segmentation tasks is limited to the expansion of popular classification-based methods including entropy, MC-dropout, etc. Meanwhile, most applications in the medical field are simply migrations that fail to consider the nature of medical images, such as high class imbalance, high domain difference, and data scarcity. In this study, we address these challenges and propose a novel AL framework for medical image segmentation task. Our approach introduces a pseudo-label-based filter addressing excessive blank patches in medical abnormalities segmentation tasks, e.g., lesions, and tumors, used before the AL selection. This filter helps reduce resource usage and allows the model to focus on selecting more informative samples. For the sample selection, we propose a novel query strategy that combines both model impact and data stability by employing adversarial attack. Furthermore, we harness the adversarial samples generated during the query process to enhance the robustness of the model. The experimental results verify our framework’s effectiveness over various state-of-the-art methods. Our proposed method only needs less than 14\% annotated patches in 3D brain MRI multiple sclerosis (MS) segmentation tasks and 20\% for Low-Grade Glioma (LGG) tumor segmentation to achieve competitive results with full supervision. These promising outcomes not only improve performance but alleviate the time burden associated with expert annotation, thereby facilitating further advancements in the field of medical image segmentation. Our code is available at https://github.com/HelenMa9998/adversarial\_active\_learning.}}, 
-pages = {108585}, 
-volume = {176}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Ma/Dong/Model-data-driven%20adversarial%20active%20learning%20for%20brain%20tumor%20segmentation/Computers%20in%20Biology%20and%20Medicine/2024/2024-Computers%20in%20Biology%20and%20Medicine-Ma-Dong-Model-data-driven%20adversarial%20active%20learning%20for%20brain%20tumor%20segmentation.pdf}
-}
-@article{10.48550/arxiv.2312.10463, 
-year = {2023}, 
-title = {{RecPrompt: A Prompt Tuning Framework for News Recommendation Using Large Language Models}}, 
-author = {Liu, Dairui and Yang, Boming and Du, Honghui and Greene, Derek and Lawlor, Aonghus and Dong, Ruihai and Li, Irene}, 
-journal = {arXiv}, 
-doi = {10.48550/arxiv.2312.10463}, 
-eprint = {2312.10463}, 
-abstract = {{In the evolving field of personalized news recommendation, understanding the semantics of the underlying data is crucial. Large Language Models (LLMs) like GPT-4 have shown promising performance in understanding natural language. However, the extent of their applicability in news recommendation systems remains to be validated. This paper introduces RecPrompt, the first framework for news recommendation that leverages the capabilities of LLMs through prompt engineering. This system incorporates a prompt optimizer that applies an iterative bootstrapping process, enhancing the LLM-based recommender's ability to align news content with user preferences and interests more effectively. Moreover, this study offers insights into the effective use of LLMs in news recommendation, emphasizing both the advantages and the challenges of incorporating LLMs into recommendation systems.}}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Liu/Li/RecPrompt-%20A%20Prompt%20Tuning%20Framework%20for%20News%20Recommendation%20Using%20Large%20Language%20Models/arXiv/2023/2023-arXiv-Liu-Li-RecPrompt-%20A%20Prompt%20Tuning%20Framework%20for%20News%20Recommendation%20Using%20Large%20Language%20Models_1.pdf}
+@article{schafer2007collaborative,
+  title={Collaborative filtering recommender systems},
+  author={Schafer, J Ben and Frankowski, Dan and Herlocker, Jon and Sen, Shilad},
+  journal={The adaptive web},
+  pages={291--324},
+  year={2007},
+  publisher={Springer}
 }
 
-@article{10.1145/3565472.3592952, 
-year = {2023}, 
-title = {{Modelling the Training Practices of Recreational Marathon Runners to Make Personalised Training Recommendations}}, 
-author = {Feely, Ciara and Caulfield, Brian and Lawlor, Aonghus and Smyth, Barry}, 
-journal = {Proceedings of the 31st ACM Conference on User Modeling, Adaptation and Personalization}, 
-doi = {10.1145/3565472.3592952}, 
-abstract = {{These days we have all become increasingly aware of the role that exercise plays in a healthy lifestyle. Activities such as cycling, triathlons, and running have become popular ways for people to keep fit and test their abilities. For recreational athletes there is no shortage of training advice or programmes to follow, yet most offer only one-size-fits-all, or minimally tailored guidance, which often leaves novices under-supported on their fitness journeys. In this work, we describe a case-based reasoning system to generate personalised training recommendations for marathon runners, based on their training histories and the training histories of similar runners with comparable race goals. The system harnesses the type of activity data that is routinely collected by smartwatches and apps like Strava. It uses prefactual explanations to suggest to runners how they may wish to adjust their training as their fitness goals evolve. We evaluate the approach using a large-scale dataset of more than 300,000 real-world runners and we show that it is feasible to generate tailored, personalised recommendations for up to 80\% of these runners. Additionally, we show that the recommendations produced are realistic and reasonable for a runner to implement, as part of their training programme. These suggestions typically include a small number (3-5) of incremental training adaptations, such as a change in weekly distance, long-run distance, or mean training pace. We argue that by engaging runners in this type of dialog about their training progress and race goals, we can better support novice runners, as their training unfolds, which may help to keep runners motivated on their long journey to race day.}}, 
-pages = {183--193}, 
-keywords = {}, 
-local-url = {file://localhost/Users/aonghus/Documents/Papers%20Library/Feely/Smyth/Modelling%20the%20Training%20Practices%20of%20Recreational%20Marathon%20Runners%20to%20Make%20Personalised%20Training%20Recommendations/Proceedings%20of%20the%2031st%20ACM%20Conference%20on%20User%20Modeling,%20Adaptation%20and%20Personalization/2023/2023-Proceedings%20of%20the%2031st%20ACM%20Conference%20on%20User%20Modeling,%20Adaptation%20and%20Personalization-Feely-Smyth-Modelling%20the%20Training%20Practices%20of%20Recreational%20Marathon%20Runners%20to%20Make%20Personalised%20Training%20Recommendations.pdf}
+@inproceedings{he2017neural,
+  title={Neural collaborative filtering},
+  author={He, Xiangnan and Liao, Lizi and Zhang, Hanwang and Nie, Liqiang and Hu, Xia and Chua, Tat-Seng},
+  booktitle={Proceedings of the 26th international conference on world wide web},
+  pages={173--182},
+  year={2017}
+}
+
+@inproceedings{rendle2010factorization,
+  title={Factorization machines},
+  author={Rendle, Steffen},
+  booktitle={2010 IEEE International Conference on Data Mining},
+  pages={995--1000},
+  year={2010},
+  organization={IEEE}
+}
+
+@inproceedings{zhou2008large,
+  title={Large-scale parallel collaborative filtering for the netflix prize},
+  author={Zhou, Yunhong and Wilkinson, Dennis and Schreiber, Robert and Pan, Rong},
+  booktitle={Proceedings of the 4th international conference on Algorithmic Aspects in Information and Management (AAIM)},
+  pages={337--348},
+  year={2008},
+  organization={Springer}
+}
+
+@inproceedings{sarwar2001item,
+  title={Item-based collaborative filtering recommendation algorithms},
+  author={Sarwar, Badrul and Karypis, George and Konstan, Joseph and Riedl, John},
+  booktitle={Proceedings of the 10th international conference on World Wide Web},
+  pages={285--295},
+  year={2001}
 }
