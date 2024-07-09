@@ -1,18 +1,18 @@
-This is the style for a PhD thesis at the School of Computer Science, University College Dublin.
+# Template for the PhD thesis at University College Dublin (UCD)
 
-# Template for the UCD PhD thesis
+**This template has not been reviewed or approved in any way by either UCD or the School of Computer Science**
 
-Welcome to the **unofficial** template for the UCD PhD thesis. 
-
+Available on [Overleaf]()
 
 Before you start with this template, please have a look at this page: [Guidelines for Preparation, Submission, Examination and Dissemination of Research Degree Theses](https://www.ucd.ie/graduatestudies/t4media/Research%20Degree%20Examination%20Guidelines%20%20August%20%202023.pdf). It will give you some important background information concerning the presentation of your thesis. 
 
 
-It is also not required for you to use this template. As far as I can tell, UCD do not provide thesis templates and it is up to you to ensure that your thesis conforms to the guidelines before submitting it.
+As far as I can tell, UCD do not provide a latex template and it is up to you to ensure that your thesis conforms to the guidelines before submitting it. This template is based on the well-known [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en) template, with some additions to conform to the UCD requirements. You are welcome to use it, and to customise it for your own needs. 
 
 
-The regulations state:
+The aren't a lot of rules about how the thesis should be prepared. The UCD thesis regulations state:
 
+```
 - Layout: Layout: Margins at the binding edge shall be not less than 30mm and other margins not less than 20mm. One-and-a-half spacing shall be used, except for indented quotations and footnotes, where single spacing may be used.
 - Font: The recommended font shall be a sans serif font (including Arial, Helvetica, Tahoma or Trebuchet) and shall not be less than 11pt. Footnotes shall not be less than 9pt.
 - Page Numbering: Pages shall be numbered consecutively throughout the substantive text of the thesis, including appendices. Prefacing pages shall also be numbered consecutively, but utilising the Roman numeral format (i., ii., iii., iv., v., etc.). Page numbers shall be right justified at the bottom of the page. If there is more than one volume, each volume shall carry its own pagination.
@@ -36,14 +36,22 @@ others, the name of such collaborators or co-authors must be listed immediately 
 - Publications from the work (if relevant): List any publications or articles submitted for publication from the research described in the thesis
 - Acknowledgements (if required): Dedication, acknowledgment and similar can be included as the final page
 - Bibliography: The style of bibliographic citations and references may be chosen by the candidate but must be consistent throughout the thesis.
+```
 
 And finally, each School will have their own guidelines and customs and you should consult your supervisor to ensure you follow the appropriate norms:
 
 - It is recommended that candidates discuss word or page limits for the chapters with their supervisor(s) and Research Studies Panel, as norms will vary across disciplines.
 
-I can't support [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en), but there is plenty of information about how to customise it online. If you want to change anything, the place to start is [tex/classicthesis-config.tex](tex/classicthesis-config.tex). [Overleaf](https://www.overleaf.com/learn) has some excellent documentation to get you started with latex.
+I can't support [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en), but there is plenty of information about how to customise it online. 
 
-I tried to follow the guidelines as closely as possible. If you have any improvements or suggestions this template, feel free to contact me: [aonghus.lawlor@ucd.ie](mailto:aonghus.lawlor@ucd.ie). 
+
+If you want to change anything in this template, the place to start is [tex/classicthesis-config.tex](tex/classicthesis-config.tex). 
+
+
+[Overleaf](https://www.overleaf.com/learn) has some excellent documentation to get you started with latex.
+
+
+I tried to follow the UCD guidelines as closely as possible. If you have any improvements or suggestions for this template, feel free to contact me: [aonghus.lawlor@ucd.ie](mailto:aonghus.lawlor@ucd.ie). 
 
 
 ## FAQ 
