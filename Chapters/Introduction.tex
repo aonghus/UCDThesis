@@ -4,6 +4,12 @@ In an era marked by an exponential growth of information and digital content, \a
 
 The inception of recommender systems can be traced back to the early days of \ac{CF}, which relied on user and item similarities to generate recommendations. Since then, the field has witnessed substantial advancements, incorporating sophisticated models such as matrix factorization, neural networks, and hybrid approaches that blend multiple recommendation strategies. These developments have significantly improved the accuracy and efficiency of recommendations, catering to diverse user needs and preferences \autocite{taleb:2010}.
 
+The original matrix factorisation algorithm proposed by Simon Funk in his blog post factorized the user-item rating matrix as the product of two lower dimensional matrices, the first one has a row for each user, while the second has a column for each item. The row or column associated to a specific user or item is referred to as latent factors. The predicted ratings can be computed as $\tilde{R}=H W$, $\tilde{R} \in \mathbb{R}^{\text {users } \times \text { items }}$ is the user-item rating matrix, $H \in \mathbb{R}^{\text {users } \times \text { latent factors }}$ contains the user's latent factors and  $W \in \mathbb{R}^{\text {latent factors } \times \text { items }}$ the item's latent factors. Specifically, the predicted rating user $u$ will give to item $i$ is computed as: 
+
+\begin{equation}
+    \tilde{r}_{u i}=\sum_{f=0}^{\mathrm{n} \text { factors }} H_{u, f} W_{f, i}
+\end{equation}
+
 Despite the remarkable progress, several challenges remain in the design and implementation of recommender systems. Issues such as scalability, cold-start problems, diversity, and fairness continue to pose significant hurdles. Furthermore, the rapid evolution of user behaviors and the dynamic nature of content necessitate continuous adaptation and innovation in recommendation methodologies \autocite{adams:2013}.
 
 This thesis aims to contribute to the ongoing discourse in the field of recommender systems by addressing key challenges and proposing novel solutions that enhance recommendation quality and user satisfaction. Through a comprehensive exploration of state-of-the-art techniques and rigorous empirical evaluations, this research endeavors to advance our understanding of effective recommendation strategies and their practical applications.
