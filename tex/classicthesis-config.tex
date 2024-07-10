@@ -169,6 +169,77 @@
 	belowcaptionskip=.75\baselineskip
 	%frame=L
 }
+
+\definecolor{commentcolor}{rgb}{0.2,0.4,0.2}
+\lstset{
+    float,
+    % By default, {listings} uses proportional-width fonts, but Source
+    % Code Pro is nice enough to use on its own. Thus, we override basicstyle
+    % as using the monospace font we declared earlier with {fontspec}.
+    basicstyle=\ttfamily,
+    % Also by default, everything is just black. Let's add some color to
+    % comments.
+    commentstyle=\small\color{commentcolor}\ttfamily,
+    % The following few settings set the listings apart using a line
+    % at the top and bottom, and subtle line numbers to the left.
+    numbers=right,
+    numberstyle=\tiny, stepnumber=5,
+    numbersep=5pt,
+    frame=lines,
+    % Here's where the real magic is: mathescape. We want to catch both
+    % Sphinx-style and LaTeX-style math escapes, which is a bit of a hack.
+    % Just don't try and use this to typeset JavaScript code that touches
+    % jQuery...
+    mathescape=true,
+    escapeinside={:math:`}{`},
+    escapebegin=$,
+    escapeend=$
+}
+
+% We'll go on and set a few options specific to Python, too, and encapsulate
+% them into a {listings} style. This way, if we have a multilingual document,
+% it will play nice.
+\lstdefinestyle{oldpython}{
+    language=Python,
+    tabsize=4,
+    showstringspaces=false
+}
+
+\definecolor{deepgreen}{rgb}{0,0.4,0}
+
+\lstdefinestyle{python}{
+		language=Python,
+		basicstyle=\color{black}\ttfamily\footnotesize,
+		stringstyle=\color{deepgreen}\slshape,
+		commentstyle=\color{gray}\slshape,
+		keywordstyle=\color{red}\textbf,
+		emphstyle=\color{blue}\textbf,
+		tabsize=2,
+		%%%%%%%%%%%%%%%
+		showstringspaces=false,
+    emph={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,i s,lambda,not,or,pass,print,raise,return,try,while,as},
+		upquote=true,
+		morecomment=[s]{"""}{"""},
+		literate=*
+		{:}{{\textcolor{blue}:}}{1}%
+		{=}{{\textcolor{blue}=}}{1}%
+		{-}{{\textcolor{blue}-}}{1}%
+		{+}{{\textcolor{blue}+}}{1}%
+		{*}{{\textcolor{blue}*}}{1}%
+		{!}{{\textcolor{blue}!}}{1}%
+		{(}{{\textcolor{blue}(}}{1}%
+		{)}{{\textcolor{blue})}}{1}%
+		{[}{{\textcolor{blue}[}}{1}%
+		{]}{{\textcolor{blue}]}}{1}%
+		{<}{{\textcolor{blue}<}}{1}%
+		{>}{{\textcolor{blue}>}}{1},%
+		%%%%%%%%%%%%%%%%
+		aboveskip=\baselineskip,
+		xleftmargin=20pt, xrightmargin=15pt,
+		frame=lines,
+		numbers=left, numberstyle=\tiny
+}
+
 % ****************************************************************************************************
 
 
@@ -304,7 +375,7 @@
 	\newfontfamily\textthesistitlefont{Latin Modern Sans}
 
 	\setmainfont[Mapping=tex-text]{Libertinus Sans}
-
+  \setmonofont{Fira Mono}
 	\renewcommand{\familydefault}{\sfdefault}
 }
 { % use Type 1 fonts with pdflatex
@@ -329,3 +400,7 @@
 
 
 \usepackage[left=3.2cm, right=3.2cm, top=2cm, bottom=2.5cm, includehead, includefoot]{geometry}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
