@@ -11,8 +11,8 @@ PROJ=UCDThesis
 # in /tmp (we could put these somewhere else, maybe a build dir?)
 # In the .latexmkrc I use lualatex because it handles fonts better.
 $(PROJ).pdf: $(PROJ).tex
-	latexmk -quiet -f -g -pdf -lualatex -output-directory=. -aux-directory=out  $<
+	latexmk -quiet -f -g -pdf -output-directory=. -aux-directory=out  $<
 # mv out/$(PROJ).pdf .
 
 clean:
-	latexmk -c -quiet -f -g -pdf -output-directory=out
+	latexmk -c -quiet -f -g -pdf -output-directory=. -aux-directory=out
