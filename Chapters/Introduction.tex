@@ -1,13 +1,13 @@
 \chapter{Introduction}\label{ch:introduction}
 
-In an era marked by an exponential growth of information and digital content, \ac{RS} have emerged as pivotal tools in helping users navigate through the vast sea of choices. These systems are integral to numerous applications, from online shopping and streaming services to social media and personalized news feeds. By leveraging advanced algorithms and data-driven techniques, recommender systems aim to predict user preferences and deliver highly relevant content, thereby enhancing user experience and engagement \autocite{seneca}. 
+In an era marked by an exponential growth of information and digital content, \ac{RS} have emerged as pivotal tools in helping users navigate through the vast sea of choices. These systems are integral to numerous applications, from online shopping and streaming services to social media and personalized news feeds. By leveraging advanced algorithms and data-driven techniques, recommender systems aim to predict user preferences and deliver highly relevant content, thereby enhancing user experience and engagement \autocite{seneca}.
 
 The inception of recommender systems can be traced back to the early days of \ac{CF}, which relied on user and item similarities to generate recommendations. Since then, the field has witnessed substantial advancements, incorporating sophisticated models such as matrix factorization, neural networks, and hybrid approaches that blend multiple recommendation strategies. These developments have significantly improved the accuracy and efficiency of recommendations, catering to diverse user needs and preferences \autocite{taleb:2010}.
 
-The original matrix factorisation algorithm proposed by Simon Funk in his blog post factorized the user-item rating matrix as the product of two lower dimensional matrices, the first one has a row for each user, while the second has a column for each item. The row or column associated to a specific user or item is referred to as latent factors. The predicted ratings can be computed as $\tilde{R}=H W$, $\tilde{R} \in \mathbb{R}^{\text {users } \times \text { items }}$ is the user-item rating matrix, $H \in \mathbb{R}^{\text {users } \times \text { latent factors }}$ contains the user's latent factors and  $W \in \mathbb{R}^{\text {latent factors } \times \text { items }}$ the item's latent factors. Specifically, the predicted rating user $u$ will give to item $i$ is computed as: 
+The original matrix factorisation algorithm proposed by Simon Funk in his blog post factorized the user-item rating matrix as the product of two lower dimensional matrices, the first one has a row for each user, while the second has a column for each item. The row or column associated to a specific user or item is referred to as latent factors. The predicted ratings can be computed as $\tilde{R}=H W$, $\tilde{R} \in \mathbb{R}^{\text {users } \times \text { items }}$ is the user-item rating matrix, $H \in \mathbb{R}^{\text {users } \times \text { latent factors }}$ contains the user's latent factors and  $W \in \mathbb{R}^{\text {latent factors } \times \text { items }}$ the item's latent factors. Specifically, the predicted rating user $u$ will give to item $i$ is computed as:
 
 \begin{equation}
-    \tilde{r}_{u i}=\sum_{f=0}^{\mathrm{n} \text { factors }} H_{u, f} W_{f, i}
+	\tilde{r}_{u i}=\sum_{f=0}^{\mathrm{n} \text { factors }} H_{u, f} W_{f, i}
 \end{equation}
 
 Despite the remarkable progress, several challenges remain in the design and implementation of recommender systems. Issues such as scalability, cold-start problems, diversity, and fairness continue to pose significant hurdles. Furthermore, the rapid evolution of user behaviors and the dynamic nature of content necessitate continuous adaptation and innovation in recommendation methodologies \autocite{adams:2013}.
@@ -17,3 +17,29 @@ This thesis aims to contribute to the ongoing discourse in the field of recommen
 The structure of this thesis is as follows: \autoref{ch:background} provides a detailed overview of the historical development and foundational concepts of recommender systems. \autoref{ch:background} delves into the various algorithmic approaches \autocite{cormen:2001}, highlighting their strengths and limitations \autocite{knuth:1974}. \autoref{ch:maintopica} addresses the pressing challenges in the field and reviews contemporary solutions proposed in the literature. \autoref{ch:maintopicb} presents the proposed methodologies and experimental setups, followed by a thorough analysis of results in \autoref{ch:maintopicc}. Finally, \autoref{ch:conclusion} concludes the thesis with a summary of findings, implications, and directions for future research.
 
 By systematically investigating and addressing the complexities of recommender systems, this thesis aspires to contribute valuable insights and practical advancements to the field, ultimately fostering more personalized and effective user experiences across digital platforms.
+
+\subsection{Testing Code}
+Let's try some code listings:
+
+\lstinputlisting[language=Python, style=python]{source.py}
+
+
+\subsection{Algorithm Testing}
+Let's try an algorithm:
+
+\begin{algorithm}
+	\begin{algorithmic}[1]
+	\Function{MergeSort}{$A, i, j$}
+	\State{{\textbf{Input}} array $A$, positive integers $i$, $j$ between $0$ and $n-1$}
+	\If{$j - i \leq 1$} \Comment{length $0$ or $1$, so already sorted}
+	  \State{}%
+	  \Return{}
+	\EndIf
+	\State{$mid = (i + j)/2$}
+	\State{$mergeSort(A, i, mid)$} \Comment{first recursive call on left side}
+	\State{$mergeSort(A, mid, j)$}  \Comment{second recursive call on right side}
+	\State{$merge(A, i, mid, j)$}
+	\EndFunction                           
+	\end{algorithmic}
+\end{algorithm}
+	
