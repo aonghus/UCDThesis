@@ -55,6 +55,12 @@ If you want to customise any of the settings, the place to start is [tex/classic
 
 I tried to follow the UCD guidelines as closely as possible. If you have any improvements or suggestions for this template, feel free to contact me: [aonghus.lawlor@ucd.ie](mailto:aonghus.lawlor@ucd.ie). 
 
+## Example
+
+
+---
+![Sample Title Page](UCDThesis.png)
+---
 
 ## FAQ 
 
