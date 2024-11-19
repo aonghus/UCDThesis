@@ -1,5 +1,4 @@
 $pdflatex = 'lualatex %O -interaction=batchmode -halt-on-error -shell-escape %S';
-#$pdflatex = 'lualatex %O  -interaction=nonstopmode -halt-on-error -shell-escape %S';
 $pdf_mode = 1;
 $clean_ext = 'crumbs';
 $cleanup_includes_generated = 1;
