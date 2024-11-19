@@ -47,7 +47,7 @@ And finally, each School will have their own guidelines and customs and you shou
 I can't support [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en), but there is plenty of information about how to customise it online. 
 
 
-If you want to customise any of the settings, the place to start is [tex/classicthesis-config.tex](tex/classicthesis-config.tex). The main file is `UCDThesis.tex` which `\includes` the files for each section. The first thing you will do is modify the `Personal Data` in `tex/classicthesis-config.tex`.
+If you want to customise any of the settings, the place to start is [tex/classicthesis-config.tex](tex/classicthesis-config.tex). The main file is `UCDThesis.tex` which `\includes` the files for each section. The first thing you will do is modify the `Personal Data` in [`tex/classicthesis-config.tex`](https://github.com/aonghus/UCDThesis/blob/65a4b7afa6cd8e38e2b4d8f5cab1b7f95f8adccc/tex/classicthesis-config.tex#L46).
 
 
 [Overleaf](https://www.overleaf.com/learn) has some excellent documentation to get you started with latex.
