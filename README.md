@@ -10,7 +10,7 @@ Before you start with this template, please have a look at this page: [Guideline
 As far as I can tell, UCD do not provide a latex template and it is up to you to ensure that your thesis conforms to the guidelines before submitting it. This template is based on the well-known [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en) template, with some additions to conform to the UCD requirements. You are welcome to use it, and to customise it for your own needs. 
 
 
-The UCD guidelines for how the PhD thesis should be prepared are fairly concise:
+The UCD guidelines for how the PhD thesis should be prepared are concise and not overly restrictive:
 
 >
 >- Layout: Layout: Margins at the binding edge shall be not less than 30mm and other margins not less than 20mm. One-and-a-half spacing shall be used, except for indented quotations and footnotes, where single spacing may be used.
@@ -55,7 +55,7 @@ If you want to customise any of the settings, the place to start is [tex/classic
 
 I tried to follow the UCD guidelines as closely as possible. If you have any improvements or suggestions for this template, feel free to contact me: [aonghus.lawlor@ucd.ie](mailto:aonghus.lawlor@ucd.ie). 
 
-## Example
+## Example Title Page
 
 
 ---
