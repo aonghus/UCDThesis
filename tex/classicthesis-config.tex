@@ -31,7 +31,7 @@
 \PassOptionsToPackage{
 	drafting=false,    % print version information on the bottom of the pages
 	tocaligned=false, % the left column of the toc will be aligned (no indentation)
-	dottedtoc=false,  % page numbers in ToC flushed right
+	dottedtoc=true,  % page numbers in ToC flushed right
 	eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
 	linedheaders=false,       % chaper headers will have line above and beneath
 	floatperchapter=true,     % numbering per chapter for all floats (i.e., Figure 1.1)
@@ -94,16 +94,17 @@
 
 \usepackage{csquotes}
 \PassOptionsToPackage{%
-	%backend=biber,bibencoding=utf8, %instead of bibtex
-	backend=bibtex8,bibencoding=ascii,%
+	backend=biber,bibencoding=utf8, %instead of bibtex
+	%backend=bibtex8,bibencoding=ascii,%
 	language=auto,%
-	style=numeric-comp,%
+	style=apa, %numeric-comp,%
 	%style=authoryear-comp, % Author 1999, 2010
 	%bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
 	sorting=nyt, % name, year, title
-	maxbibnames=10, % default: 3, et al.
-	%backref=true,%
-	natbib=true % natbib compatibility mode (\citep and \citet still work)
+	%maxbibnames=10, % default: 3, et al.
+	backref=true,%
+	natbib=true, % natbib compatibility mode (\citep and \citet still work)
+	hyperref=true,doi=true, url=false, eprint=true
 }{biblatex}
 \usepackage{biblatex}
 
@@ -282,6 +283,11 @@
 	pdfproducer={LaTeX with hyperref and classicthesis}%
 }
 
+%%%
+%% https://tex.stackexchange.com/a/537471
+%% Link full citation label in biblatex APA style
+\input{tex/bibcitefix.tex}
+%%%
 
 % ********************************************************************
 % Setup autoreferences (hyperref and babel)

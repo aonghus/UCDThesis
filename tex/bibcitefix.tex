@@ -1,0 +1,138 @@
+\makeatletter
+\renewbibmacro*{cite:author}{%
+  \iffieldequals{namehash}{\cbx@lasthash}
+% Multiple cites in one command
+   {\setunit{\compcitedelim}%
+    \printtext[bibhyperref]{%
+      \usebibmacro{cite:plabelyear+extradate}}}%
+% Single cite
+   {\printtext[bibhyperref]{%
+      \ifnameundef{labelname}
+% No author/editor
+       {\usebibmacro{cite:noname}%
+         \savefield{namehash}{\cbx@lasthash}}
+% Normal cite
+       {\ifnameundef{shortauthor}
+         {\printnames{labelname}}%
+         {\cbx@apa@ifnamesaved
+            {\printnames{shortauthor}}
+            {\printnames[labelname]{author}%
+             \addspace\printnames[sabrackets]{shortauthor}}}%
+          \savefield{namehash}{\cbx@lasthash}}}}%
+   \setunit{\multicitedelim}}
+
+\renewbibmacro*{cite}{%
+  \iffieldequals{namehash}{\cbx@lasthash}
+% Multiple cites in one command
+   {\setunit{\compcitedelim}%
+    \printtext[bibhyperref]{%
+      \usebibmacro{cite:plabelyear+extradate}}}%
+% Single cite
+   {\printtext[bibhyperref]{%
+      \ifnameundef{labelname}
+% No author/editor
+       {\usebibmacro{cite:noname}%
+         \setunit{\printdelim{nameyeardelim}}%
+         \usebibmacro{cite:plabelyear+extradate}%
+         \savefield{namehash}{\cbx@lasthash}}
+% Normal cite
+       {\ifnameundef{shortauthor}
+         {\printnames{labelname}}%
+         {\cbx@apa@ifnamesaved
+           {\printnames{shortauthor}}
+           {\printnames[labelname]{author}%
+            \addspace\printnames[sabrackets]{shortauthor}}}%
+         \setunit{\printdelim{nameyeardelim}}%
+        \usebibmacro{cite:plabelyear+extradate}%
+        \savefield{namehash}{\cbx@lasthash}}}}%
+   \setunit{\multicitedelim}}
+
+\renewbibmacro*{textcite}{%
+  \iffieldequals{namehash}{\cbx@lasthash}
+% Compact cite - more than one thing for same author
+    {\setunit{\compcitedelim}%
+     \printtext[bibhyperref]{%
+       \usebibmacro{cite:plabelyear+extradate}}}
+% New cite
+    {\ifbool{cbx:parens}
+       {\bibcloseparen\global\boolfalse{cbx:parens}}
+       {}%
+     \setunit{\textcitedelim}%
+     \ifnameundef{labelname}
+     % No author/editor
+       {\iffieldundef{shorthand}%
+    % Cite using title
+         {\printtext[bibhyperref]{\usebibmacro{cite:noname}}%
+          \setunit{\global\booltrue{cbx:parens}%
+                   \printdelim{nonameyeardelim}%
+                   \bibopenparen}%
+          \printtext[bibhyperref]{%
+            \usebibmacro{cite:plabelyear+extradate}}}
+    % Cite using shorthand
+         {\printtext[bibhyperref]{%
+            \usebibmacro{cite:shorthand}}}}
+  % Normal cite with author/editor
+  % Normal full cite
+       {\printtext[bibhyperref]{%
+          \ifnameundef{shortauthor}%
+    % Normal full cite
+           {\printnames{labelname}}
+    % Cite using short author
+           {\cbx@apa@ifnamesaved
+             {\printnames{shortauthor}}
+             {\printnames[labelname]{author}}}}%
+  % Year
+        \setunit{\global\booltrue{cbx:parens}%
+                 \printdelim{nameyeardelim}%
+                 \bibopenparen}%
+  % Put the shortauthor inside the year brackets if necessary
+        \printtext[bibhyperref]{%
+          \ifnameundef{shortauthor}
+           {}
+           {\cbx@apa@ifnamesaved
+             {}
+             {\printnames{shortauthor}%
+              \setunit{\printdelim{innernameyeardelim}}}}%
+  % Print prenote (belongs to first cite)
+        \ifnumequal{\value{citecount}}{1}
+           {\usebibmacro{prenote}}
+           {}%
+  % Actual year printing
+        \usebibmacro{cite:plabelyear+extradate}%
+  % Save name hash for checks later
+        \savefield{namehash}{\cbx@lasthash}}%
+    \stepcounter{textcitecount}}}}
+
+\renewbibmacro*{cite:plabelyear+extradate}{%
+  \iffieldundef{labelyear}{}
+    {\clearfield{labelmonth}% don't want months in citations
+     \clearfield{labelday}% don't want days in citations
+     \clearfield{labelendmonth}% don't want months in citations
+     \clearfield{labelendday}% don't want days in citations
+     \clearfield{labelyeardivision}% don't want yeardivisions in citations
+     \clearfield{labelendyeardivision}% don't want yeardivisions in citations
+     \iffieldsequal{labelyear}{labelendyear}% Don't want no-op year ranges
+       {\clearfield{labelendyear}}
+       {}%
+     \iffieldundef{origyear}
+       {}
+       {\printorigdate%
+        \setunit*{\addslash}}%
+     \iffieldundef{related}
+       {}
+       {\iffieldequalstr{relatedtype}{reprintfrom}
+         {\entrydata*{\thefield{related}}{\printlabeldateextra}%
+          \setunit*{\addslash}}
+         {}}%
+     \printlabeldateextra}}
+
+\renewbibmacro*{citeyear}{%
+  \iffieldundef{labelyear}
+    {\usebibmacro{cite:init}}
+    {\iffieldequals{namehash}{\cbx@lasthash}
+       {\setunit{\compcitedelim}%
+        \printtext[bibhyperref]{\usebibmacro{cite:plabelyear+extradate}}}
+       {\printtext[bibhyperref]{\usebibmacro{cite:plabelyear+extradate}}%
+        \savefield{namehash}{\cbx@lasthash}}}%
+  \setunit{\multicitedelim}}
+\makeatother
