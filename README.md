@@ -4,7 +4,7 @@
 
 Available on [Overleaf]()
 
-Before you start with this template, please have a look at this page: [Guidelines for Preparation, Submission, Examination and Dissemination of Research Degree Theses](https://www.ucd.ie/graduatestudies/t4media/Research%20Degree%20Examination%20Guidelines%20%20August%20%202023.pdf). It will give you some important background information concerning the presentation of your thesis. 
+Before you start with this template, please have a look at this page: [Guidelines for Preparation, Submission, Examination and Dissemination of Research Degree Theses](https://www.ucd.ie/graduatestudies/t4media/Guidelines_Preparation_Submission_Examination_Dissemination_Research_Degree_Theses_March2025.pdf). It will give you some important background information concerning the presentation of your thesis. 
 
 
 As far as I can tell, UCD do not provide a latex template and it is up to you to ensure that your thesis conforms to the guidelines before submitting it. This template is based on the well-known [ClassicThesis](https://ctan.org/pkg/classicthesis?lang=en) template, with some additions to conform to the UCD requirements. You are welcome to use it, and to customise it for your own needs. 
